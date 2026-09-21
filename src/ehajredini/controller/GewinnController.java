@@ -1,4 +1,4 @@
-package ehajredini;
+package ehajredini.controller;
 
 public class GewinnController {
 }
