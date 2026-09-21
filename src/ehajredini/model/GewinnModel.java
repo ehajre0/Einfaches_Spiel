@@ -1,4 +1,4 @@
-package ehajredini;
+package ehajredini.model;
 
 import java.util.Random;
 
