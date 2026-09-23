@@ -33,6 +33,7 @@ public class GewinnController {
                 resetRunde();
             }
         });
+        view.getResetBtn().setEnabled(false);
     }
 
     private void spielzugAusfuehren(){
@@ -62,12 +63,16 @@ public class GewinnController {
             JOptionPane.showMessageDialog(view, "Deine Punkte sind auf 0. Verloren!", "Verloren", JOptionPane.INFORMATION_MESSAGE);
 
         }
+        view.getSpielerZahlField().setEnabled(false);
+        view.getResetBtn().setEnabled(true);
 
     }
     private void resetRunde() {
         view.getSpielerZahlField().setText("");
         view.getComputerZahlField().setText("");
         view.getErgebnisLabel().setText("Rundenergebnis: -");
+        view.getSpielerZahlField().setEnabled(true);
+        view.getResetBtn().setEnabled(false);
 
     }
 
