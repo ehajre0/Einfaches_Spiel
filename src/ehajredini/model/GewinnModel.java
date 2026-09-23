@@ -23,12 +23,14 @@ public class GewinnModel {
     public int getRundenErgebnis(){
         return this.rundenErgebnis;
     }
-    public void berechneComputerZahl(){
-        this.computerZahl = random.nextInt(9) + 1;
+    public int berechneComputerZahl(){
+        return random.nextInt(9) + 1;
     }
 
     public void berechneRunde(int spielerZahl){
+
         this.spielerZahl = spielerZahl;
+        this.computerZahl = berechneComputerZahl();
         if(this.computerZahl == this.spielerZahl){
             this.rundenErgebnis = 20;
         }

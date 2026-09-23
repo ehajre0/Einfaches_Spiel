@@ -12,6 +12,7 @@ public class GewinnView extends JFrame {
     private JButton resetBtn;
 
     public GewinnView(){
+
         setTitle("Zahlen Gewinnspiel");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(450, 220);
@@ -49,7 +50,7 @@ public class GewinnView extends JFrame {
 
         computerZahlField = new JTextField();
         computerZahlField.setHorizontalAlignment(JTextField.CENTER);
-        computerZahlField.setEditable(false); // Nicht bearbeitbar laut Angabe
+        computerZahlField.setEditable(false);
 
         centerPanel.add(spielerPromptLabel);
         centerPanel.add(computerPromptLabel);
