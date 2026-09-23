@@ -7,6 +7,7 @@ import ehajredini.view.GewinnView;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
 
 public class GewinnController {
     private GewinnModel model;
@@ -56,6 +57,14 @@ public class GewinnController {
         view.getErgebnisLabel().setText("Rundenergebnis: " + zeichen + ergebnis);
         view.getPunkteLabel().setText("Punkte: " + model.getGesamtPunkte());
 
+
+
+        if (ergebnis > 0) {
+            view.getErgebnisLabel().setForeground(Color.GREEN);
+        } else {
+            view.getErgebnisLabel().setForeground(Color.RED);
+        }
+
         if(model.hatGewonnen()){
             JOptionPane.showMessageDialog(view, "Du hast 100 Punkte erreicht und Gewonnen!", "Gewonnen", JOptionPane.INFORMATION_MESSAGE);
         }else if(model.hatVerloren()){
@@ -63,11 +72,13 @@ public class GewinnController {
 
         }
 
+
     }
     private void resetRunde() {
         view.getSpielerZahlField().setText("");
         view.getComputerZahlField().setText("");
         view.getErgebnisLabel().setText("Rundenergebnis: -");
+        view.getErgebnisLabel().setForeground(Color.BLACK);
 
     }
 
