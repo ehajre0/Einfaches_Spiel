@@ -4,6 +4,13 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 
+/**
+ * Die View des Zahlen-Gewinnspiels
+ * Stellt die Benutzeroberfläche bereit
+ *
+ * @author Erdi Hajredini
+ * @version 09/26/2026
+ */
 public class GewinnView extends JFrame {
     private JLabel rundenErgebnisLabel;
     private JLabel punkteLabel;
@@ -11,6 +18,9 @@ public class GewinnView extends JFrame {
     private JTextField computerZahlField;
     private JButton resetBtn;
 
+    /**
+     * Erstellt das GUI-Fenster und initialisiert alle Komponenten und Panels.
+     */
     public GewinnView(){
 
         setTitle("Zahlen Gewinnspiel");
@@ -18,6 +28,7 @@ public class GewinnView extends JFrame {
         setSize(450, 220);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout(10, 10));
+
 
         JPanel topPanel = new JPanel(new GridLayout(1, 2, 10, 0));
         topPanel.setBorder(BorderFactory.createEmptyBorder(10,20,5,10));
